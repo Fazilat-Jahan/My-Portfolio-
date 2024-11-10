@@ -73,7 +73,7 @@ export default function Home() {
                   <span className="animate-blink">|</span>
                 </div>
 
-                <Link href="/contact"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-2 md:py-4 py-2 ml-8  bg-black rounded-2xl md:rounded-3xl border-spacing-1 text-yellow-500  hover:bg-yellow-500 hover:text-black hover:border-neutral-950  shadow-lg">Contact Me</button> </Link>
+                <Link href="#contact"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-2 md:py-4 py-2 ml-8  bg-black rounded-2xl md:rounded-3xl border-spacing-1 text-yellow-500  hover:bg-yellow-500 hover:text-black hover:border-neutral-950  shadow-lg">Contact Me</button> </Link>
               </div>
 
               <div className=" h-full w-full flex flex-col px-0 md:px-12 md:py-0 py-0 items-center mt-0 md:mt-0">
