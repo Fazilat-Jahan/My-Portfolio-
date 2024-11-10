@@ -1,12 +1,12 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 
 export default function Home() {
 
-  const textArray = ["Developer", "Designer"];
+  const textArray = useMemo(() => ["Developer", "Designer"], []);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loop, setLoop] = useState(0);
@@ -38,7 +38,7 @@ export default function Home() {
     const timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loop, typingSpeed]);
+  }, [text, isDeleting, loop, typingSpeed, textArray]); 
 
   return (
     <div className="min-h-screen w-full overflow-hidden">
@@ -92,9 +92,9 @@ export default function Home() {
 
               <p className="text-2xl py-6 md:text-xl text-justify font-serif font-medium text-black leading-normal">Hello! I am Fazilat Jahan, a front-end developer and designer dedicated to crafting beautiful, intuitive digital experiences. With a strong foundation in HTML, CSS, and JavaScript, alongside expertise in frameworks like React and Next.js, I bring designs to life with seamless functionality. My design skills, allow me to create interfaces that are not only visually compelling but also user-centered.
 
-                I am driven by a passion for detail and a commitment to delivering high-quality, responsive, and engaging websites. Staying up-to-date with industry trends is essential to me, and I constantly explore new tools and techniques to keep my work innovative. Whether I am developing or designing, my goal is always the same: to make the digital world more accessible and enjoyable for users.
+                I am driven by a passion for detail and a commitment to delivering high-quality, responsive, and engaging websites. Staying up-to-date with industry trends is essential to me, and I constantly explore new tools and techniques to keep my work innovative. Whether I am developing or designing, my goal is always the same to make the digital world more accessible and enjoyable for users.
 
-                Lets connect and discuss how I can contribute to your next project!</p>
+                Let connect and discuss how I can contribute to your next project!</p>
 
             </div>
           </section>
