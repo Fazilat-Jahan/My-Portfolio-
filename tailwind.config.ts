@@ -8,16 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      animation: {
-        'spin-slow': 'spin 10s linear infinite',
-        'spin-slow-reverse': 'spin-reverse 12s linear infinite',
-      },
-      keyframes: {
-        'spin-reverse': {
-          from: { transform: 'rotate(360deg)' },
-          to: { transform: 'rotate(0deg)' },
-        },
-      },
       colors: {
         greenish: {
           tuscan:'#576d2c',
