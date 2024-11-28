@@ -235,7 +235,7 @@ export default function Home() {
           </section>
 
           {/* websites cards */}
-          <section className="min-h-screen flex place-items-center md:p-4 p-8 ">
+          <section className="min-h-screen flex place-items-center md:p-4  ">
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 w-11/12 gap-6 p-2 md:p-6 ">
               {/* card 1 */}
@@ -275,7 +275,7 @@ export default function Home() {
 
               {/* card 4 */}
 
-              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
+              <Link href={"https://my-portfolio-fazilat-jahans-projects.vercel.app"} target='blank'>
                 <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
                   <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
                   <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
