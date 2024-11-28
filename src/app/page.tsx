@@ -1,9 +1,15 @@
 'use client';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { FaLinkedin } from 'react-icons/fa';
 import "../app/globals.css";
+
 
 export default function Home() {
 
@@ -41,6 +47,8 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [text, isDeleting, loop, typingSpeed, textArray]);
 
+  // Logo Animation Speed
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -53,6 +61,28 @@ export default function Home() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  //Image Swipers
+  const images = [
+    "/calculator.png",
+    "/calculator.png",
+    "/calculator.png",
+    "/calculator.png",
+    "/calculator.png",
+  ];
+
+
+  // Slick slider settings
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    dots: true,
+  };
+
   return (
     <div className="min-h-screen w-full overflow-hidden">
 
@@ -63,7 +93,7 @@ export default function Home() {
 
         <nav className=" top-0 right-0 left-0 justify-between items-center flex flex-wrap w-full  ">
           <div className="flex space-x-2 items-center md:px-10">
-            <video ref={videoRef} src="/NameLogo.mp4" autoPlay loop muted className="w-4/5 h-4/5 opacity-80" />
+            <video ref={videoRef} src="/NameLogo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 opacity-80" />
           </div>
 
 
@@ -122,7 +152,7 @@ export default function Home() {
             <div className="flex-col md:flex-row min-h-screen w-full flex ">
 
               <div className="flex flex-col md:w-1/2 w-full items-center sm:items-center md:items-start ">
-                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-16 md:mt-10 mt:20 text-greenish-garden ">Hi! I'm FrontEnd</h1>
+                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 md:mt-10 text-greenish-garden ">Hi! I'm FrontEnd</h1>
 
                 <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-10 md:pt-6 text-greenish-sunset ">
                   <span>{text}</span>
@@ -133,21 +163,21 @@ export default function Home() {
               </div>
 
 
-
-              <div className="flex md:w-1/2 w-full justify-center">
+              {/* Image */}
+              <div className="flex md:w-1/2 w-full justify-center mt-4">
                 <div className="relative md:w-80 md:h-80 w-64 h-64 flex ">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Wave Layers */}
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-garden animate-thin-wave"></div>
-                   
+
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-tuscan animate-thin-wave animation-delay-1"></div>
-                  
+
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-sunset animate-thin-wave animation-delay-2"></div>
-                  
+
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-garden animate-thin-wave animation-delay-3"></div>
-                  
+
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-tuscan animate-thin-wave animation-delay-4"></div>
-                   
+
                     <div className="absolute w-full h-full rounded-full border-[2px] border-greenish-sunset animate-thin-wave animation-delay-5"></div>
                   </div>
 
@@ -169,24 +199,98 @@ export default function Home() {
             </div>
           </section>
 
+
+          {/* Project Sections */}
+
+          <section id="projects" className="min-h-screen flex place-items-center md:p-4 p-8 ">
+
+            <div className="flex flex-col md:flex-row w-11/12 md:w-1/2 gap-6 p-2 md:p-8">
+              <div className="w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl">
+                <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">TypeScript Projects</h1>
+                <Slider {...settings} className="rounded-xl justify-center items-center">
+                  {images.map((src, index) => (
+                    <div key={index} className="flex justify-center place-items-center items-center">
+                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto  hover:scale-110 transition duration-150 rounded-lg ">
+                        <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+
+
+              <div className="w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl">
+                <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">Next.JS Projects</h1>
+                <Slider {...settings} className="rounded-xl justify-center items-center">
+                  {images.map((src, index) => (
+                    <div key={index} className="flex justify-center place-items-center items-center">
+                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto  hover:scale-110 transition duration-150 rounded-lg ">
+                        <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </section>
+
+          {/* websites cards */}
+          <section className="min-h-screen flex place-items-center md:p-4 p-8 ">
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 w-11/12 gap-6 p-2 md:p-6 ">
+              {/* card 1 */}
+              <Link href={"https://the-wall-art.vercel.app"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Multi Page Responsive Website</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/wall art.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+
+              {/* card 2 */}
+              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Static ATS Resume</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/static resume.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+
+              {/* card 3 */}
+              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>ATS Resume Builder</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/resume builder.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+              {/* card 4 */}
+
+              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/personal portfolio.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+            </div>
+          </section>
+
           {/* ABOUT SECTION */}
 
           <section id="about" className="flex space-y-2 min-h-screen flex-col bg-gradient-to-l from-greenish-garden via-greenish-tuscan">
-            {/*             
-            <nav className="shadow-xl top-0 right-0 left-0 justify-between items-center flex flex-wrap w-full  ">
-            <div className="flex space-x-2 items-center md:px-10">
-            <Image src="/NameLogo1.png" alt="Name Logo" width={200} height={200} className="" />
-             </div>
-
-          <div className="flex px-4 space-x-2 mt-2 md:mt-0 md:space-x-6 text-sm md:text-lg font-bold  font-serif">
-            <Link href="#home">  <button className=" textOutline hover:text-greenish-garden  text-greenish-sunset "> Home </button> </Link>
-            <Link href="#about">  <button className="textOutline hover:text-greenish-garden  text-greenish-sunset"> About </button> </Link>
-            <Link href="#contact">  <button className="textOutline hover:text-greenish-garden  text-greenish-sunset"> Contact </button> </Link>
-            {/* <Link href="#contact">  <button className="hover:text-yellow-500  text-greenish-sunset"> Project </button> </Link> */}
-            {/* <Link href="/">  <button> Projects </button> </Link>
-          <Link href="/">  <button> Blog </button> </Link> */}
-            {/* </div> */}
-            {/* </nav> */}
 
 
             <div className=" flex px-8 md:px-16 ">
@@ -205,36 +309,41 @@ export default function Home() {
 
           {/* CONTACT SECTION */}
 
-          <section id="contact" className=" flex w-full min-h-screen items-center justify-center px-12">
-            <div className="flex w-full max-w-xl mx-auto">
-              <form action="" className="flex flex-col mx-auto my-0 rounded-xl border-greenish-garden w-full min-w-min p-6 bg-white/20 border-2 shadow-md backdrop:blur-lg md:p-12" >
+          <section id="contact" className="flex w-full min-h-screen items-center justify-center px-4 md:px-12">
+  <div className="md:w-auto w-full md:mx-auto mx-3"> 
+    <form action="" className="flex flex-col mx-auto my-0 rounded-xl border-greenish-garden w-full p-4 bg-white/20 border-2 shadow-md backdrop:blur-lg md:p-12"> 
+      <h1 className="text-xl sm:text-2xl md:text-3xl text-center font-bold font-serif mb-6 text-greenish-garden">Contact Me</h1> 
 
-                <h1 className="text-2xl text-center font-bold font-serif mb-6 text-greenish-garden"> Contact Me </h1>
+      <div className="space-y-4 md:text-base text-sm md:font-bold font-semibold">
+        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+          <span className='md:font-medium font-normal'>Name: </span>Fazilat Jahan
+        </div>
+        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+          <span className='md:font-medium font-normal'>Email: </span>fazilat.jahan07@gmail.com
+        </div>
+        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+          <span className='md:font-medium font-normal'>LinkedIn: </span>
+          <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="hover:underline hover:text-greenish-tuscan">linkedin.com/fazilatjahan
+          </Link>
+        </div>
+      </div>
 
-                <div className="space-y-4">
+      <div className="mt-6">
+        <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="block w-full py-3 px-4 font-bold cursor-pointer transition duration-300 rounded-lg text-greenish-garden bg-greenish-tuscan hover:bg-greenish-sunset/40 hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg text-center font-serif">
+          Feel Free To Contact Me
+        </Link>
+      </div>
+    </form>
+  </div>
+</section>
 
-                  <input type="text" placeholder="Name" required className="w-full bg-greenish-sunset/30 px-4 py-3 border-none  text-black rounded-lg placeholder-greenish-garden focus:outline-none focus:ring-greenish-tuscan focus:ring-2" />
-
-                  <input type="email" placeholder="Email" required className="w-full   bg-greenish-sunset/30 px-4 py-3 border-none text-black rounded-lg placeholder-greenish-garden focus:outline-none focus:ring-greenish-tuscan focus:ring-2" />
-
-                  <textarea placeholder="Message" required className="w-full   bg-greenish-sunset/30 px-4 py-3 border-none text-black rounded-lg placeholder-greenish-garden focus:outline-none focus:ring-greenish-tuscan focus:ring-2"></textarea>
-                </div>
-
-                <div className="mt-6">
-                  <input type="submit" value="Submit" className="w-full py-3 px-4 font-bold cursor-pointer transition duration-300 rounded-lg text-greenish-garden bg-greenish-tuscan hover:bg-greenish-sunset/40 hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg" />
-                </div>
-
-              </form>
-            </div>
-
-          </section>
 
 
         </main>
 
 
         <div className="fixed md:bottom-5 md:right-5 z-20 bottom-1 right-1">
-          <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={50} color="#b9b26c" className=" linkedInIcon shadow-2xl rounded-full" />
           </Link>
         </div>
