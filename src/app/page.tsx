@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Toggle Menu */}
         <div
-          className={`fixed top-0 right-0 md:h-screen  h-3/5 w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 md:h-screen  h-full w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
             } transition-transform duration-300 z-30`}
         >
 
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="flex-col md:flex-row min-h-screen w-full flex ">
 
               <div className="flex flex-col md:w-1/2 w-full items-center sm:items-center md:items-start ">
-                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-10 text-greenish-garden ">Hi! I'm FrontEnd</h1>
+                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-8 text-greenish-garden ">Hi! I'm FrontEnd</h1>
 
                 <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-10 md:pt-6 text-greenish-sunset ">
                   <span>{text}</span>
