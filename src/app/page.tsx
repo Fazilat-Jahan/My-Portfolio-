@@ -86,14 +86,14 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full overflow-hidden">
 
-      <video src="/Background.mp4" autoPlay loop muted className="absolute top-0 left-0 object-cover w-full min-h-screen -z-10">
+      <video src="/Background.mp4" autoPlay loop muted className="absolute top-0 left-0 object-cover w-full min-h-screen opacity-40 -z-10">
       </video>
 
       <div className="relative z-10 min-h-screen w-full bg-greenish-tuscan bg-opacity-85">
 
         <nav className=" top-0 right-0 left-0 justify-between items-center flex flex-wrap w-full  ">
           <div className="flex space-x-2 items-center md:px-10">
-            <video ref={videoRef} src="/NameLogo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 opacity-80" />
+            <video ref={videoRef} src="/Logo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 md:m-2 m-4" />
           </div>
 
 
@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Toggle Menu */}
         <div
-          className={`fixed top-0 right-0 h-screen w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 md:h-screen  h-3/5 w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
             } transition-transform duration-300 z-30`}
         >
 
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="flex-col md:flex-row min-h-screen w-full flex ">
 
               <div className="flex flex-col md:w-1/2 w-full items-center sm:items-center md:items-start ">
-                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 md:mt-10 text-greenish-garden ">Hi! I'm FrontEnd</h1>
+                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-10 text-greenish-garden ">Hi! I'm FrontEnd</h1>
 
                 <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-10 md:pt-6 text-greenish-sunset ">
                   <span>{text}</span>
@@ -164,7 +164,7 @@ export default function Home() {
 
 
               {/* Image */}
-              <div className="flex md:w-1/2 w-full justify-center mt-4">
+              <div className="flex md:w-1/2 w-full justify-center mt-6">
                 <div className="relative md:w-80 md:h-80 w-64 h-64 flex ">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Wave Layers */}
@@ -201,16 +201,18 @@ export default function Home() {
 
 
           {/* Project Sections */}
+<div id='projects' className='min-h-screen justify-center items-center'>
 
-          <section id="projects" className="min-h-screen flex place-items-center md:p-4 p-8 ">
 
-            <div className="flex flex-col md:flex-row w-11/12 md:w-1/2 gap-6 p-2 md:p-8">
-              <div className="w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl">
+          <section className="h-auto flex place-items-center md:p-4 p-8   ">
+
+            <div className="flex flex-col md:flex-row w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
+              <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
                 <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">TypeScript Projects</h1>
                 <Slider {...settings} className="rounded-xl justify-center items-center">
                   {images.map((src, index) => (
                     <div key={index} className="flex justify-center place-items-center items-center">
-                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto  hover:scale-110 transition duration-150 rounded-lg ">
+                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto rounded-lg ">
                         <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
                       </div>
                     </div>
@@ -219,12 +221,12 @@ export default function Home() {
               </div>
 
 
-              <div className="w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl">
+              <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
                 <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">Next.JS Projects</h1>
                 <Slider {...settings} className="rounded-xl justify-center items-center">
                   {images.map((src, index) => (
                     <div key={index} className="flex justify-center place-items-center items-center">
-                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto  hover:scale-110 transition duration-150 rounded-lg ">
+                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
                         <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
                       </div>
                     </div>
@@ -235,7 +237,7 @@ export default function Home() {
           </section>
 
           {/* websites cards */}
-          <section className="min-h-screen flex place-items-center md:p-4  ">
+          <section className="h-auto flex place-items-center md:p-4 p-8 ">
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 w-11/12 gap-6 p-2 md:p-6 ">
               {/* card 1 */}
@@ -285,8 +287,21 @@ export default function Home() {
                 </div>
               </Link>
 
+              {/* card 5 */}
+
+              <Link href={"https://governor-initiative-liard.vercel.app/"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>GIAIC Website</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/giaic.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
             </div>
           </section>
+          </div>
 
           {/* ABOUT SECTION */}
 
