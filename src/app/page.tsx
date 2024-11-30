@@ -93,7 +93,7 @@ export default function Home() {
 
         <nav className=" top-0 right-0 left-0 justify-between items-center flex flex-wrap w-full  ">
           <div className="flex space-x-2 items-center md:px-10">
-            <video ref={videoRef} src="/Logo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 md:m-2 m-4" />
+            <video ref={videoRef} src="/Logo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 m-2 " />
           </div>
 
 
