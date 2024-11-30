@@ -93,7 +93,7 @@ export default function Home() {
 
         <nav className=" top-0 right-0 left-0 justify-between items-center flex flex-wrap w-full  ">
           <div className="flex space-x-2 items-center md:px-10">
-            <video ref={videoRef} src="/Logo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5 m-2 " />
+            <video ref={videoRef} src="/Logo.mp4" autoPlay loop muted className="w-3/5 h-3/5 md:w-4/5 md:h-4/5  opacity-75" />
           </div>
 
 
@@ -154,7 +154,7 @@ export default function Home() {
               <div className="flex flex-col md:w-1/2 w-full items-center sm:items-center md:items-start ">
                 <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-8 text-greenish-garden ">Hi! I'm FrontEnd</h1>
 
-                <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-10 md:pt-6 text-greenish-sunset ">
+                <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-8 md:pt-6 text-greenish-sunset ">
                   <span>{text}</span>
                   <span className="animate-blink">|</span>
                 </div>
@@ -202,7 +202,10 @@ export default function Home() {
 
           {/* Project Sections */}
 <div id='projects' className='min-h-screen justify-center items-center'>
-
+<div className=" flex px-8 md:px-16 ">
+              <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden underline ">
+                My Projects</h1>
+            </div>
 
           <section className="h-auto flex place-items-center md:p-4 p-8   ">
 
@@ -309,7 +312,7 @@ export default function Home() {
 
 
             <div className=" flex px-8 md:px-16 ">
-              <h1 className="text-3xl mt-6 md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden  ">
+              <h1 className="text-3xl mt-6 md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden underline   ">
                 About My Self</h1>
             </div>
             <div className="px-8 md:px-16 ">
