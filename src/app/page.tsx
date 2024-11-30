@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Toggle Menu */}
         <div
-          className={`fixed top-0 right-0 md:h-screen  h-full w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 md:h-screen  h-4/5 w-28 md:w-32 rounded-s-full bg-greenish-garden bg-opacity-60 text-greenish-sunset shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
             } transition-transform duration-300 z-30`}
         >
 
@@ -146,7 +146,7 @@ export default function Home() {
 
         {/* HOME SECTION */}
 
-        <main className="block">
+        <main className="block overflow-hidden">
           <section id="home" className="flex w-full min-h-screen">
 
             <div className="flex-col md:flex-row min-h-screen w-full flex ">
