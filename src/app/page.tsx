@@ -207,7 +207,7 @@ export default function Home() {
                 My Projects</h1>
             </div>
 
-          <section className="h-auto  place-items-center md:p-4 p-8   ">
+          <section className="h-auto  place-items-center md:p-4 p-6   ">
 
             <div className=" w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
               <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
@@ -254,11 +254,45 @@ export default function Home() {
                 </div>
               </Link>
 
-
               {/* card 2 */}
+              <Link href={"https://e-commerce-store-swart-two.vercel.app/"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Responsive UI/UX Figma Desing</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/shop.co.jpg"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+{/* card 3 */}
+
+<Link href={"https://my-portfolio-fazilat-jahans-projects.vercel.app"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/personal portfolio.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+              {/* card 4 */}
+              <Link href={"https://ui-ux-e-commerce.vercel.app/"} target='blank'>
+                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>UI/UX Figma Clone</h1>
+                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                    <Image src={"/figma clone.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                  </div>
+                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                </div>
+              </Link>
+
+
+              {/* card 5 */}
               <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/"} target='blank'>
                 <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Static ATS Resume</h1>
+                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Static Resume</h1>
                   <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
                     <Image src={"/static resume.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
                   </div>
@@ -267,7 +301,7 @@ export default function Home() {
               </Link>
 
 
-              {/* card 3 */}
+              {/* card 6 */}
               <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
                 <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
                   <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>ATS Resume Builder</h1>
@@ -278,19 +312,9 @@ export default function Home() {
                 </div>
               </Link>
 
-              {/* card 4 */}
+              
 
-              <Link href={"https://my-portfolio-fazilat-jahans-projects.vercel.app"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/personal portfolio.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
-                  </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
-
-              {/* card 5 */}
+              {/* card 7 */}
 
               <Link href={"https://governor-initiative-liard.vercel.app/"} target='blank'>
                 <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
