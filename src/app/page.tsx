@@ -183,15 +183,15 @@ export default function Home() {
 
 
 
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-greenish-garden via-greenish-tuscan to-greenish-sunset p-1 flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-l from-greenish-tuscan via-greenish-sunset to-greenish-tuscan p-1 flex items-center justify-center">
                     <div className="absolute inset-1 rounded-full border-[6px] border-greenish-tuscan"></div>
                     <div className="absolute inset-2 rounded-full border-[4px] border-greenish-sunset"></div>
                     <div className="absolute inset-3 rounded-full border-[2px] border-greenish-garden"></div>
                   </div>
 
 
-                  <div className=" absolute inset-4 rounded-full overflow-hidden flex items-center justify-center">
-                    <Image src={"/Profile-Picture.png"} alt="Profile Picture" width={400} height={400} className="md:w-fit md:h-96 w-fit h-80" />
+                  <div className=" absolute inset-3.5 rounded-full overflow-hidden flex items-center justify-center">
+                    <Image src={"/display picture.png"} alt="Profile Picture" width={400} height={400} className="md:w-fit md:h-fit  w-fit h-fit" />
                   </div>
                 </div>
               </div>
@@ -207,9 +207,9 @@ export default function Home() {
                 My Projects</h1>
             </div>
 
-          <section className="h-auto flex place-items-center md:p-4 p-8   ">
+          <section className="h-auto  place-items-center md:p-4 p-8   ">
 
-            <div className="flex flex-col md:flex-row w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
+            <div className=" w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
               <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
                 <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">TypeScript Projects</h1>
                 <Slider {...settings} className="rounded-xl justify-center items-center">
@@ -223,7 +223,7 @@ export default function Home() {
                 </Slider>
               </div>
 
-
+{/* 
               <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
                 <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">Next.JS Projects</h1>
                 <Slider {...settings} className="rounded-xl justify-center items-center">
@@ -235,7 +235,7 @@ export default function Home() {
                     </div>
                   ))}
                 </Slider>
-              </div>
+              </div> */}
             </div>
           </section>
 
