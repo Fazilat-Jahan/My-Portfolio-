@@ -64,10 +64,15 @@ export default function Home() {
   //Image Swipers
   const images = [
     "/calculator.png",
-    "/calculator.png",
-    "/calculator.png",
-    "/calculator.png",
-    "/calculator.png",
+    "/number guessing.png",
+    "/atm.png",
+    "/to do list.png",
+    "/currency converter.png",
+    "/word counter.png",
+    "/SMS.png",
+    "/adventure game.png",
+    "/quiz app.png",
+    "/countdowns timer.png",
   ];
 
 
