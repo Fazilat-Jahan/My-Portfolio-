@@ -256,7 +256,7 @@ export default function Home() {
                 {/* card 1 */}
                 <Link href={"https://estore-clothing.vercel.app/"} target='blank'>
                   <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>E-Commerce  </h1>
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Fully Functional E-Commerce  </h1>
                     <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
                       <Image src={"/clothing-e-store.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
                     </div>
@@ -265,7 +265,7 @@ export default function Home() {
                 </Link>
 
                 {/* card 2 */}
-                <Link href={"https://estore-clothing.vercel.app/"} target='blank'>
+                <Link href={"https://techware-blog.vercel.app/"} target='blank'>
                   <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
                     <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Blog Website</h1>
                     <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
