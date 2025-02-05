@@ -164,8 +164,8 @@ export default function Home() {
                   <span className="animate-blink">|</span>
                 </div>
 
-                <div className='flex'>
-                  <Link href="#projects"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-5 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-garden  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg ">Projects</button> </Link>
+                <div className='flex gap-2'>
+                  <Link href="#projects"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-4 md:px-5 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-garden  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg ">Projects</button> </Link>
 
                   <Link href="#contact"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-2 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-sunset  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-garden hover:border-greenish-garden shadow-lg">Contact Me</button> </Link>
                 </div>
