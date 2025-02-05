@@ -157,14 +157,18 @@ export default function Home() {
             <div className="flex-col md:flex-row min-h-screen w-full flex ">
 
               <div className="flex flex-col md:w-1/2 w-full items-center sm:items-center md:items-start ">
-                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-8 text-greenish-garden ">Hi! I'm FrontEnd</h1>
+                <h1 className="flex text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-4 md:px-1 md:py-8 pt-8 mt-8 text-greenish-garden ">Hi! I'm Web</h1>
 
                 <div className="text-4xl md:text-6xl font-serif font-bold md:font-extrabold px-8 md:px-1 pb-10 pt-8 md:pt-6 text-greenish-sunset ">
                   <span>{text}</span>
                   <span className="animate-blink">|</span>
                 </div>
 
-                <Link href="#contact"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-2 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-garden  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg">Contact Me</button> </Link>
+                <div className='flex'>
+                  <Link href="#projects"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-5 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-garden  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg ">Projects</button> </Link>
+
+                  <Link href="#contact"> <button className="flex text-sm md:text-xl font-extrabold font-serif px-1 md:px-2 md:py-3 py-2 md:ml-8 mb-3 md:mb-0 md:rounded-2xl rounded-xl text-greenish-sunset  hover:bg-greenish-sunset hover:text-greenish-garden border border-greenish-garden hover:border-greenish-garden shadow-lg">Contact Me</button> </Link>
+                </div>
               </div>
 
 
@@ -206,29 +210,29 @@ export default function Home() {
 
 
           {/* Project Sections */}
-<div id='projects' className='min-h-screen justify-center items-center'>
-<div className=" flex px-8 md:px-16 ">
+          <div id='projects' className='min-h-screen justify-center items-center'>
+            <div className=" flex px-8 md:px-16 ">
               <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden underline ">
                 My Projects</h1>
             </div>
 
-          <section className="h-auto  place-items-center md:p-4 p-6   ">
+            <section className="h-auto  place-items-center md:p-4 p-6   ">
 
-            <div className=" w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
-              <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
-                <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">TypeScript Projects</h1>
-                <Slider {...settings} className="rounded-xl justify-center items-center">
-                  {images.map((src, index) => (
-                    <div key={index} className="flex justify-center place-items-center items-center">
-                      <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto rounded-lg ">
-                        <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+              <div className=" w-11/12 md:w-1/2 gap-6 px-2 md:p-8">
+                <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
+                  <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">TypeScript Projects</h1>
+                  <Slider {...settings} className="rounded-xl justify-center items-center">
+                    {images.map((src, index) => (
+                      <div key={index} className="flex justify-center place-items-center items-center">
+                        <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto rounded-lg ">
+                          <Image src={src} alt={`Project ${index + 1}`} width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </Slider>
-              </div>
+                    ))}
+                  </Slider>
+                </div>
 
-{/* 
+                {/* 
               <div className="md:w-11/12 w-full h-auto md:py-10 py-8 px-8 md:px-16 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl hover:scale-105 transition duration-150">
                 <h1 className="font-bold text-greenish-sunset font-serif md:text-2xl text-lg text-center md:pb-8 pb-2">Next.JS Projects</h1>
                 <Slider {...settings} className="rounded-xl justify-center items-center">
@@ -241,98 +245,121 @@ export default function Home() {
                   ))}
                 </Slider>
               </div> */}
-            </div>
-          </section>
+              </div>
+            </section>
 
-          {/* websites cards */}
-          <section className="h-auto flex place-items-center md:p-4 p-8 ">
+            {/* websites cards */}
+            <section className="h-auto flex place-items-center md:p-4 p-8 ">
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 w-11/12 gap-6 p-2 md:p-6 ">
-              {/* card 1 */}
-              <Link href={"https://the-wall-art.vercel.app"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Multi Page Responsive Website</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/wall art.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 w-11/12 gap-6 p-2 md:p-6 ">
+
+                {/* card 1 */}
+                <Link href={"https://estore-clothing.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>E-Commerce  </h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/clothing-e-store.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-              {/* card 2 */}
-              <Link href={"https://e-commerce-store-swart-two.vercel.app/"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Responsive UI/UX Figma Desing</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/shop.co.jpg"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                {/* card 2 */}
+                <Link href={"https://estore-clothing.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Blog Website</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/techwareBlog.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-{/* card 3 */}
-
-<Link href={"https://my-portfolio-fazilat-jahans-projects.vercel.app"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/personal portfolio.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                {/* card 2 */}
+                <Link href={"https://the-wall-art.vercel.app"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Multi Page Responsive Website</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/wall art.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-              {/* card 4 */}
-              <Link href={"https://ui-ux-e-commerce.vercel.app/"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>UI/UX Figma Clone</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/figma clone.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                {/* card 2 */}
+                <Link href={"https://e-commerce-store-swart-two.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Responsive UI/UX Figma Desing</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/shop.co.jpg"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
+                {/* card 3 */}
 
-              {/* card 5 */}
-              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Static Resume</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/static resume.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                <Link href={"https://my-portfolio-fazilat-jahans-projects.vercel.app"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Personal Portfolio</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/personal portfolio.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-
-              {/* card 6 */}
-              <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>ATS Resume Builder</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/resume builder.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                {/* card 4 */}
+                <Link href={"https://ui-ux-e-commerce.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>UI/UX Figma Clone</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/figma clone.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-              
 
-              {/* card 7 */}
-
-              <Link href={"https://governor-initiative-liard.vercel.app/"} target='blank'>
-                <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
-                  <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>GIAIC Website</h1>
-                  <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
-                    <Image src={"/giaic.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                {/* card 5 */}
+                <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>Static Resume</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/static resume.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
                   </div>
-                  <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
-                </div>
-              </Link>
+                </Link>
 
-            </div>
-          </section>
+
+                {/* card 6 */}
+                <Link href={"https://resume-builder-fazilat-jahans-projects.vercel.app/indexx.html"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>ATS Resume Builder</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/resume builder.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                  </div>
+                </Link>
+
+
+
+                {/* card 7 */}
+
+                <Link href={"https://governor-initiative-liard.vercel.app/"} target='blank'>
+                  <div className="w-full h-auto md:py-2 py-4 px-3 md:px-4 bg-gradient-to-l from-greenish-garden via-greenish-tuscan border border-greenish-garden rounded-2xl md:rounded-3xl place-items-center hover:scale-105 transition duration-150">
+                    <h1 className='font-bold text-greenish-sunset font-serif md:text-xl text-lg text-center md:py-4 pb-2'>GIAIC Website</h1>
+                    <div className="overflow-hidden  place-items-center text-center w-full md:w-full h-auto   rounded-lg ">
+                      <Image src={"/giaic.png"} alt="wall art" width={500} height={500} className="shadow-2xl rounded-lg w-full h-full" />
+                    </div>
+                    <button className='text-sm md:text-lg font-bold font-serif px-1 md:px-2 pt-2 my-2 md:rounded-2xl rounded-xl text-greenish-garden  hover:text-greenish-sunset shadow-lg'>Get Preview</button>
+                  </div>
+                </Link>
+
+              </div>
+            </section>
           </div>
 
           {/* ABOUT SECTION */}
@@ -357,32 +384,32 @@ export default function Home() {
           {/* CONTACT SECTION */}
 
           <section id="contact" className="flex w-full min-h-screen items-center justify-center px-4 md:px-12">
-  <div className="md:w-auto w-full md:mx-auto mx-3"> 
-    <form action="" className="flex flex-col mx-auto my-0 rounded-xl border-greenish-garden w-full p-4 bg-white/20 border-2 shadow-md backdrop:blur-lg md:p-12"> 
-      <h1 className="text-xl sm:text-2xl md:text-3xl text-center font-bold font-serif mb-6 text-greenish-garden">Contact Me</h1> 
+            <div className="md:w-auto w-full md:mx-auto mx-3">
+              <form action="" className="flex flex-col mx-auto my-0 rounded-xl border-greenish-garden w-full p-4 bg-white/20 border-2 shadow-md backdrop:blur-lg md:p-12">
+                <h1 className="text-xl sm:text-2xl md:text-3xl text-center font-bold font-serif mb-6 text-greenish-garden">Contact Me</h1>
 
-      <div className="space-y-4 md:text-base text-sm md:font-bold font-semibold">
-        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
-          <span className='md:font-medium font-normal'>Name: </span>Fazilat Jahan
-        </div>
-        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
-          <span className='md:font-medium font-normal'>Email: </span>fazilat.jahan07@gmail.com
-        </div>
-        <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
-          <span className='md:font-medium font-normal'>LinkedIn: </span>
-          <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="hover:underline hover:text-greenish-tuscan">linkedin.com/fazilatjahan
-          </Link>
-        </div>
-      </div>
+                <div className="space-y-4 md:text-base text-sm md:font-bold font-semibold">
+                  <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+                    <span className='md:font-medium font-normal'>Name: </span>Fazilat Jahan
+                  </div>
+                  <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+                    <span className='md:font-medium font-normal'>Email: </span>fazilat.jahan07@gmail.com
+                  </div>
+                  <div className="w-full font-serif bg-greenish-sunset/30 px-4 py-3 border-none text-greenish-garden rounded-lg">
+                    <span className='md:font-medium font-normal'>LinkedIn: </span>
+                    <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="hover:underline hover:text-greenish-tuscan">linkedin.com/fazilatjahan
+                    </Link>
+                  </div>
+                </div>
 
-      <div className="mt-6">
-        <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="block w-full py-3 px-4 font-bold cursor-pointer transition duration-300 rounded-lg text-greenish-garden bg-greenish-tuscan hover:bg-greenish-sunset/40 hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg text-center font-serif">
-          Feel Free To Contact Me
-        </Link>
-      </div>
-    </form>
-  </div>
-</section>
+                <div className="mt-6">
+                  <Link href="https://www.linkedin.com/in/fazilatjahan-content-writer/" target="_blank" className="block w-full py-3 px-4 font-bold cursor-pointer transition duration-300 rounded-lg text-greenish-garden bg-greenish-tuscan hover:bg-greenish-sunset/40 hover:text-greenish-garden border border-greenish-sunset hover:border-greenish-garden shadow-lg text-center font-serif">
+                    Feel Free To Contact Me
+                  </Link>
+                </div>
+              </form>
+            </div>
+          </section>
 
 
 
