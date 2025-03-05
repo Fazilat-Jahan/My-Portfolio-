@@ -259,7 +259,7 @@ export default function Home() {
           {/* Project Sections */}
           <div id='projects' className='min-h-screen justify-center items-center'>
             <div className=" flex px-8 md:px-16 ">
-              <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden underline ">
+              <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-4 md:px-18 py-2 text-greenish-garden underline ">
                 My Featured Projects</h1>
             </div>
 
@@ -310,7 +310,7 @@ export default function Home() {
 
             {/* hands on projects */}
             <div className=" flex px-8 md:px-16 ">
-              <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-8 md:px-18 py-4 text-greenish-garden underline ">
+              <h1 className="text-3xl md:text-5xl font-serif font-bold md:font-extrabold px-4 md:px-18 py-4 text-greenish-garden underline ">
                 My Hands-on Projects</h1>
             </div>
 
